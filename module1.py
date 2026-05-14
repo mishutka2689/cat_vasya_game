@@ -53,17 +53,4 @@ class Unit(ABC):
         return spell.cast()
 
 
-class Monster(Unit):
-    """Monster class implementing Unit abstract methods."""
-    
-    def calculate_max_health(self) -> int:
-        # constitution * 8 + strength // 3
-        return self.constitution * 8 + self.strength // 3
-
-    def calculate_damage(self) -> int:
-        # strength * 2 + constitution // 5
-        return self.strength * 2 + self.constitution // 5
-
-    def calculate_defense(self) -> int:
-        # constitution * 1.2 + strength // 5
         return int(self.constitution * 1.2) + self.strength // 5
